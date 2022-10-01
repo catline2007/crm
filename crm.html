@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Form</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/index.css"> 
+        <script src="js/index.js"></script>
+	</head>
+	
+    <body>
+        <div class="modal">
+            <h1>добавить товар</h1>
+                
+            <form id="add_product" class="modal__container" action="https://jsonplaceholder.typicode.com/posts" method="post">
+                
+                <div class="first__column">
+                    <div>
+                        <p class="modal__container-text">наименование</p>
+                    <label>
+                        <input type="text" class="modal__container-input-text" id="product_name" name="product_name">
+                    </label>
+                    </div>
+                        
+                    <div>
+                        <p class="modal__container-text">категория</p>
+                    <label>
+                        <input type="text" class="modal__container-input-text" id="category" name="category">
+                    </label>
+                    </div>
+                        
+                    <div>
+                        <p class="modal__container-text">единицы измерения</p>
+                    <label>
+                        <input type="text" class="modal__container-input-text" id="units" name="units">
+                    </label> 
+                    </div>
+                    
+                    <div>
+                        <p class="modal__container-text">дисконт</p>
+                    <div class="discount">
+                        <label for="checkbox"></label>
+                        <label for="count"></label>
+                        <input id="discount" type="checkbox" class="discount__checkbox" name="discount">
+                        <input id="discount_count" type="text" class="discount__count" name="discount_count">
+                    </div>
+                    </div>
+
+                </div>
+                
+                
+                <div class="second__column">
+                    <div>
+                        <p class="modal__container-text">описание</p>
+                    <label>
+                        <textarea class="modal__container-textarea" rows="6" id="descripction" name="descripction">
+                        </textarea>
+                    </label>
+                    </div>
+                        
+                    <div>
+                        <p class="modal__container-text">количество</p>
+                    <label>
+                        <input type="number" class="modal__container-input-text" id="count" name="count">
+                    </label>
+                    </div>
+                        
+
+                    <div>
+                        <p class="modal__container-text">цена</p>
+                    <label>
+                        <input type="number" class="modal__container-input-text" id="price" name="price">
+                    </label>
+                    </div>
+
+                    <button class="img__btn" type="button">ДОБАВИТЬ ИЗОБРАЖЕНИЕ</button>
+
+                </div>
+            </form>
+
+            <div class="total">
+                <p> <span class="total__text">Итоговая стоимость:</span> <span class="total__text_big">$ 900.00</span></p>
+                <button class="add__btn" type="submit" form="add_product">ДОБАВИТЬ ТОВАР</button>
+            </div>
+
+        </div>
+	</body>
+</html>
